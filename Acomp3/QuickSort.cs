@@ -4,7 +4,7 @@ namespace Acomp3
 {
     class QuickSort : IQuickSort
     {
-        public void Part(int[] E, int left, int right)
+        public int Part(int[] E, int left, int right)
         {
             throw new NotImplementedException();
         }
@@ -16,7 +16,7 @@ namespace Acomp3
 
         public void Sort(int[] E, int n)
         {
-            throw new NotImplementedException();
+            Sort(E, 0, n-1);
         }
     }
 }

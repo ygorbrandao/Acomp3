@@ -2,19 +2,9 @@
 
 namespace Acomp3
 {
-    class TailQuickSort : IQuickSort
+    class TailQuickSort : QuickSort
     {
-        public void Part(int[] E, int left, int right)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Sort(int[] E, int left, int right)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Sort(int[] E, int n)
+        public override void Sort(int[] E, int left, int right)
         {
             throw new NotImplementedException();
         }

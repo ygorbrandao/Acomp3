@@ -4,7 +4,7 @@ namespace Acomp3
 {
     class TailQuickSort : QuickSort
     {
-        public override void Sort(int[] E, int left, int right)
+        public void Sort(int[] E, int left, int right)
         {
             throw new NotImplementedException();
         }

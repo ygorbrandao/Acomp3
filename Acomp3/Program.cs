@@ -12,7 +12,7 @@ namespace Acomp3
         public class Tests
         {
 
-            [Params(100, 1000, 10000)]
+            [Params(1000, 10000)]
             public int N { get; set; }
 
             [Benchmark]
@@ -28,34 +28,25 @@ namespace Acomp3
             }
 
             [Benchmark]
-            public void RandomTailQuickSortTest()
+            public void RandomHeapSortTest()
             {
-                (new TailQuickSort()).Sort(new RandomArray(N).Array, N);
+                (new HeapSort()).Sort(new RandomArray(N).Array, N);
             }
 
             [Benchmark]
-            public void WorstTailQuickSortTest()
+            public void WorstHeapSortTest()
             {
-                (new TailQuickSort()).Sort(new WorstArray(N).Array, N);
+                (new HeapSort()).Sort(new WorstArray(N).Array, N);
             }
 
         }
 
         [Fact]
-        public static void QuickSortTest()
+        public static void HeapSortTest()
         {
             int[] A = new RandomArray(10).Array;
             int[] B = (int[])A.Clone();
-            new QuickSort().Sort(B, 10);
-            Assert.True(A.OrderBy(i => i).ToArray().SequenceEqual(B));
-        }
-
-        [Fact]
-        public static void TailQuickSortTest()
-        {
-            int[] A = new RandomArray(10).Array;
-            int[] B = (int[])A.Clone();
-            new TailQuickSort().Sort(B, 10);
+            new HeapSort().Sort(B, 10);
             Assert.True(A.OrderBy(i => i).ToArray().SequenceEqual(B));
         }
         
